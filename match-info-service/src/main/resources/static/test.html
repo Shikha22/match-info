@@ -1,0 +1,26 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    var data = [
+  {"country":{"country_id":"41","country_name":"England"},"leagues":[{"league_id":"149","league_name":"Championship"}],"teams":[{"149":{"team_key":"2615","team_name":"Bournemouth"}},{"149":{"team_key":"2618","team_name":"Swansea"}},{"149":{"team_key":"2622","team_name":"Huddersfield"}},{"149":{"team_key":"2623","team_name":"Watford"}},{"149":{"team_key":"2624","team_name":"Stoke City"}},{"149":{"team_key":"2631","team_name":"Birmingham"}},{"149":{"team_key":"2634","team_name":"Nottingham"}},{"149":{"team_key":"2637","team_name":"Cardiff"}},{"149":{"team_key":"2638","team_name":"Millwall"}},{"149":{"team_key":"2641","team_name":"Norwich"}},{"149":{"team_key":"2642","team_name":"Derby"}},{"149":{"team_key":"2643","team_name":"Preston"}},{"149":{"team_key":"2644","team_name":"Brentford"}},{"149":{"team_key":"2645","team_name":"QPR"}},{"149":{"team_key":"2647","team_name":"Reading"}},{"149":{"team_key":"2648","team_name":"Middlesbrough"}},{"149":{"team_key":"2650","team_name":"Bristol City"}},{"149":{"team_key":"2651","team_name":"Sheffield Wed"}},{"149":{"team_key":"2652","team_name":"Barnsley"}},{"149":{"team_key":"2675","team_name":"Rotherham"}},{"149":{"team_key":"2680","team_name":"Blackburn"}},{"149":{"team_key":"2695","team_name":"Luton"}},{"149":{"team_key":"2696","team_name":"Coventry"}},{"149":{"team_key":"2703","team_name":"Wycombe"}}],"position":null}
+];
+$(document).ready(function () {
+    var html = '<table class="table table-striped">';
+    html += '<tr>';
+    var flag = 0;
+    $.each(data[0], function(index, value){
+        html += '<th>'+index+'</th>';
+    });
+    html += '</tr>';
+     $.each(data, function(index, value){
+         html += '<tr>';
+        $.each(value, function(index2, value2){
+            html += '<td>'+value2+'</td>';
+        });
+        html += '<tr>';
+     });
+     html += '</table>';
+     $('body').html(html);
+});
+</script>
