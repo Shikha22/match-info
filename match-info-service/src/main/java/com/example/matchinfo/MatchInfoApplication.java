@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MatchInfoApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(MatchInfoApplication.class, args);
 	}
 
